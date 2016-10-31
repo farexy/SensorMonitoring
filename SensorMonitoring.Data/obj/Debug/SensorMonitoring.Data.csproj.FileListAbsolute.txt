@@ -1,0 +1,13 @@
+D:\Progects\Саша\SensorMonitoring\SensorMonitoring.Data\obj\Debug\SensorMonitoring.Data.csprojResolveAssemblyReference.cache
+D:\Progects\Саша\SensorMonitoring\SensorMonitoring.Data\bin\SensorMonitoring.Data.dll.config
+D:\Progects\Саша\SensorMonitoring\SensorMonitoring.Data\bin\SensorMonitoring.Data.dll
+D:\Progects\Саша\SensorMonitoring\SensorMonitoring.Data\bin\SensorMonitoring.Data.pdb
+D:\Progects\Саша\SensorMonitoring\SensorMonitoring.Data\bin\EntityFramework.dll
+D:\Progects\Саша\SensorMonitoring\SensorMonitoring.Data\bin\EntityFramework.SqlServer.dll
+D:\Progects\Саша\SensorMonitoring\SensorMonitoring.Data\bin\EntityFramework.xml
+D:\Progects\Саша\SensorMonitoring\SensorMonitoring.Data\bin\EntityFramework.SqlServer.xml
+D:\Progects\Саша\SensorMonitoring\SensorMonitoring.Data\bin\ru\EntityFramework.resources.dll
+D:\Progects\Саша\SensorMonitoring\SensorMonitoring.Data\obj\Debug\SensorMonitoring.Data.dll
+D:\Progects\Саша\SensorMonitoring\SensorMonitoring.Data\obj\Debug\SensorMonitoring.Data.pdb
+D:\Progects\Саша\SensorMonitoring\SensorMonitoring.Data\obj\Debug\SensorMonitoring.Data.Migrations.Dbcreated.resources
+D:\Progects\Саша\SensorMonitoring\SensorMonitoring.Data\obj\Debug\SensorMonitoring.Data.csproj.GenerateResource.Cache
