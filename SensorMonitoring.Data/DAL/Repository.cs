@@ -8,7 +8,8 @@ namespace SensorMonitoring.Data.DAL
 {
     public class Repository<T> : IRepository<T> where T : IModel
     {
-        ApplicationDbContext db = new ApplicationDbContext();
+
+        protected ApplicationDbContext db = new ApplicationDbContext();
         public void Add(T item)
         {
             db.Set<T>().Add(item);

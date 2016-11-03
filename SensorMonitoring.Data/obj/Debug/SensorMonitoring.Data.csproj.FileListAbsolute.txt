@@ -11,3 +11,16 @@ D:\Progects\Саша\SensorMonitoring\SensorMonitoring.Data\obj\Debug\SensorMoni
 D:\Progects\Саша\SensorMonitoring\SensorMonitoring.Data\obj\Debug\SensorMonitoring.Data.pdb
 D:\Progects\Саша\SensorMonitoring\SensorMonitoring.Data\obj\Debug\SensorMonitoring.Data.Migrations.Dbcreated.resources
 D:\Progects\Саша\SensorMonitoring\SensorMonitoring.Data\obj\Debug\SensorMonitoring.Data.csproj.GenerateResource.Cache
+D:\Дистанционное\АтППЗ\SensorMonitoring\SensorMonitoring\SensorMonitoring.Data\bin\SensorMonitoring.Data.dll.config
+D:\Дистанционное\АтППЗ\SensorMonitoring\SensorMonitoring\SensorMonitoring.Data\bin\SensorMonitoring.Data.dll
+D:\Дистанционное\АтППЗ\SensorMonitoring\SensorMonitoring\SensorMonitoring.Data\bin\SensorMonitoring.Data.pdb
+D:\Дистанционное\АтППЗ\SensorMonitoring\SensorMonitoring\SensorMonitoring.Data\bin\EntityFramework.dll
+D:\Дистанционное\АтППЗ\SensorMonitoring\SensorMonitoring\SensorMonitoring.Data\bin\EntityFramework.SqlServer.dll
+D:\Дистанционное\АтППЗ\SensorMonitoring\SensorMonitoring\SensorMonitoring.Data\bin\EntityFramework.xml
+D:\Дистанционное\АтППЗ\SensorMonitoring\SensorMonitoring\SensorMonitoring.Data\bin\EntityFramework.SqlServer.xml
+D:\Дистанционное\АтППЗ\SensorMonitoring\SensorMonitoring\SensorMonitoring.Data\bin\ru\EntityFramework.resources.dll
+D:\Дистанционное\АтППЗ\SensorMonitoring\SensorMonitoring\SensorMonitoring.Data\obj\Debug\SensorMonitoring.Data.csprojResolveAssemblyReference.cache
+D:\Дистанционное\АтППЗ\SensorMonitoring\SensorMonitoring\SensorMonitoring.Data\obj\Debug\SensorMonitoring.Data.Migrations.Dbcreated.resources
+D:\Дистанционное\АтППЗ\SensorMonitoring\SensorMonitoring\SensorMonitoring.Data\obj\Debug\SensorMonitoring.Data.csproj.GenerateResource.Cache
+D:\Дистанционное\АтППЗ\SensorMonitoring\SensorMonitoring\SensorMonitoring.Data\obj\Debug\SensorMonitoring.Data.dll
+D:\Дистанционное\АтППЗ\SensorMonitoring\SensorMonitoring\SensorMonitoring.Data\obj\Debug\SensorMonitoring.Data.pdb

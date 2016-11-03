@@ -6,6 +6,7 @@ using System.Web;
 
 namespace SensorMonitoring.Data.Models
 {
+    
     public class Sensor : IModel
     { 
         public int Id { set; get; }

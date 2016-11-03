@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.40629.0
+VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SensorMonitoring.Data", "SensorMonitoring.Data\SensorMonitoring.Data.csproj", "{423D82A2-674F-48BF-80E5-3B90DA63E4DF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SensorMonitoring.DataApi", "SensorMonitoring.DataApi\SensorMonitoring.DataApi.csproj", "{67CAA6BB-E408-447A-8C29-FBF0425ABE37}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SensorMonitoring.DataService", "SensorMonitoring.DataService\SensorMonitoring.DataService.csproj", "{027E78D8-8FFD-47B8-BD7C-BC5421982AEA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{67CAA6BB-E408-447A-8C29-FBF0425ABE37}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{67CAA6BB-E408-447A-8C29-FBF0425ABE37}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{67CAA6BB-E408-447A-8C29-FBF0425ABE37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{027E78D8-8FFD-47B8-BD7C-BC5421982AEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{027E78D8-8FFD-47B8-BD7C-BC5421982AEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{027E78D8-8FFD-47B8-BD7C-BC5421982AEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{027E78D8-8FFD-47B8-BD7C-BC5421982AEA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

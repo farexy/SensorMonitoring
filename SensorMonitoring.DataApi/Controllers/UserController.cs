@@ -14,15 +14,15 @@ namespace SensorMonitoring.DataApi.Controllers
     {
         private IRepository<User> repo = new Repository<User>();
 
-        //public User GetUserById(int? id)
-        //{
-        //    return repo.Get(new object[]{id});
-        //}
-
+        public User GetUserById(int id)
+        {
+            return repo.Get(new object[]{id});
+        }
+        /*
         public IEnumerable<User> GetUsers()
         {
-            return repo.Get();
-        }
+            return repo.GetUsers();
+        }*/
 
         [System.Web.Http.HttpPost]
         public bool CreateUser(User user)

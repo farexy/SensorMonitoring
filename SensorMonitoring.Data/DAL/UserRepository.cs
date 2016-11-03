@@ -6,16 +6,20 @@ using System.Web;
 
 namespace SensorMonitoring.Data.DAL
 {
-    public class UserRepository
+    public class UserRepository : Repository<User>
     {
-        private static ApplicationDbContext db = new ApplicationDbContext();
 
-        public static User GetUser(int id)
+        public User GetUser(int? id)
         {
             return db.Users.FirstOrDefault(u => u.Id == id);
         }
 
-        public static void AddUser(User user)
+        public IEnumerable<User> GetUsers()
+        {
+            return db.Users;
+        } 
+
+        public void AddUser(User user)
         {
             db.Users.Add(user);
         }
