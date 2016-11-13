@@ -1,13 +1,33 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SensorMonitoring.Data", "SensorMonitoring.Data\SensorMonitoring.Data.csproj", "{423D82A2-674F-48BF-80E5-3B90DA63E4DF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SensorMonitoring.DataApi", "SensorMonitoring.DataApi\SensorMonitoring.DataApi.csproj", "{67CAA6BB-E408-447A-8C29-FBF0425ABE37}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SensorMonitoring.DataService", "SensorMonitoring.DataService\SensorMonitoring.DataService.csproj", "{027E78D8-8FFD-47B8-BD7C-BC5421982AEA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SensorMonitoring.BusinessLogicService", "WcfService1\SensorMonitoring.BusinessLogicService.csproj", "{39A2F8CB-2165-42AD-A127-8A2AC2BB9C5D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SensorMonitoring.BusinessLogic", "SensorMonitoring.BusinessLogin\SensorMonitoring.BusinessLogic.csproj", "{AA75D68F-B004-4972-978B-84A07FAECAC8}"
+	ProjectSection(ProjectDependencies) = postProject
+		{027E78D8-8FFD-47B8-BD7C-BC5421982AEA} = {027E78D8-8FFD-47B8-BD7C-BC5421982AEA}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SensorMonitoring.SLApi", "SensorMonitoring.SLApi\SensorMonitoring.SLApi.csproj", "{B27E129C-97A8-46CC-B1AD-0BF1C1C8D1E5}"
+	ProjectSection(ProjectDependencies) = postProject
+		{39A2F8CB-2165-42AD-A127-8A2AC2BB9C5D} = {39A2F8CB-2165-42AD-A127-8A2AC2BB9C5D}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SensorMonitoring.SL", "SensorMonitoring.SL\SensorMonitoring.SL.csproj", "{4644B97D-DFE1-4858-AA07-BFC179DA899E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{39A2F8CB-2165-42AD-A127-8A2AC2BB9C5D} = {39A2F8CB-2165-42AD-A127-8A2AC2BB9C5D}
+		{027E78D8-8FFD-47B8-BD7C-BC5421982AEA} = {027E78D8-8FFD-47B8-BD7C-BC5421982AEA}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SensorMonitoring.DataAPI", "SensorMonitoring.DataAPI\SensorMonitoring.DataAPI.csproj", "{61E4B669-02F5-462A-A29C-10BEFAC5D6B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SensorMonitoring.BLLAPI", "SensorMonitoring.BLLAPI\SensorMonitoring.BLLAPI.csproj", "{B7B72FD2-F211-4E5D-8EF5-DF4DB1DAC2F0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,14 +39,34 @@ Global
 		{423D82A2-674F-48BF-80E5-3B90DA63E4DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{423D82A2-674F-48BF-80E5-3B90DA63E4DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{423D82A2-674F-48BF-80E5-3B90DA63E4DF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{67CAA6BB-E408-447A-8C29-FBF0425ABE37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{67CAA6BB-E408-447A-8C29-FBF0425ABE37}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{67CAA6BB-E408-447A-8C29-FBF0425ABE37}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{67CAA6BB-E408-447A-8C29-FBF0425ABE37}.Release|Any CPU.Build.0 = Release|Any CPU
 		{027E78D8-8FFD-47B8-BD7C-BC5421982AEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{027E78D8-8FFD-47B8-BD7C-BC5421982AEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{027E78D8-8FFD-47B8-BD7C-BC5421982AEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{027E78D8-8FFD-47B8-BD7C-BC5421982AEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39A2F8CB-2165-42AD-A127-8A2AC2BB9C5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39A2F8CB-2165-42AD-A127-8A2AC2BB9C5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39A2F8CB-2165-42AD-A127-8A2AC2BB9C5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39A2F8CB-2165-42AD-A127-8A2AC2BB9C5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA75D68F-B004-4972-978B-84A07FAECAC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA75D68F-B004-4972-978B-84A07FAECAC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA75D68F-B004-4972-978B-84A07FAECAC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA75D68F-B004-4972-978B-84A07FAECAC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B27E129C-97A8-46CC-B1AD-0BF1C1C8D1E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B27E129C-97A8-46CC-B1AD-0BF1C1C8D1E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B27E129C-97A8-46CC-B1AD-0BF1C1C8D1E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B27E129C-97A8-46CC-B1AD-0BF1C1C8D1E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4644B97D-DFE1-4858-AA07-BFC179DA899E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4644B97D-DFE1-4858-AA07-BFC179DA899E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4644B97D-DFE1-4858-AA07-BFC179DA899E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4644B97D-DFE1-4858-AA07-BFC179DA899E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61E4B669-02F5-462A-A29C-10BEFAC5D6B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61E4B669-02F5-462A-A29C-10BEFAC5D6B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61E4B669-02F5-462A-A29C-10BEFAC5D6B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61E4B669-02F5-462A-A29C-10BEFAC5D6B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7B72FD2-F211-4E5D-8EF5-DF4DB1DAC2F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7B72FD2-F211-4E5D-8EF5-DF4DB1DAC2F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7B72FD2-F211-4E5D-8EF5-DF4DB1DAC2F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7B72FD2-F211-4E5D-8EF5-DF4DB1DAC2F0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

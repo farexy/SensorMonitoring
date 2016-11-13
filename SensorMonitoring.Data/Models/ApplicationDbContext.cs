@@ -10,6 +10,7 @@ namespace SensorMonitoring.Data.Models
         public ApplicationDbContext()
             : base("name=ApplicationDbContext")
         {
+            this.Configuration.ProxyCreationEnabled = false;
         }
 
 

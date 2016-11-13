@@ -4,19 +4,20 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Web;
+using SensorMonitoring.Data.Models;
 
-namespace SensorMonitoring.Data.Models
+namespace SensorMonitoring.Data.DTO
 {
-        [DataContract]
+    [DataContract]
     public class SubscriptionDto : IModelDto
     {
         [DataMember]
         public int UserId { set; get; }
-            [DataMember]
+        [DataMember]
         public UserDto User { set; get; }
-            [DataMember]
+        [DataMember]
         public int SensorId { set; get; }
-            [DataMember]
+        [DataMember]
         public SensorDto Sensor { set; get; }
 
         public override object[] Keys { get { return new object[] { UserId, SensorId }; } }
@@ -25,9 +26,9 @@ namespace SensorMonitoring.Data.Models
         public SubscriptionDto(Subscription subscription)
         {
             UserId = subscription.UserId;
-            User = new UserDto(subscription.User);
+            //User = new UserDto(subscription.User);
             SensorId = subscription.SensorId;
-            Sensor = new SensorDto(subscription.Sensor);
+            //Sensor = new SensorDto(subscription.Sensor);
         }
 
             public Subscription ToEntity()

@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Web;
+using SensorMonitoring.Data.Models;
 
-namespace SensorMonitoring.Data.Models
+namespace SensorMonitoring.Data.DTO
 {
     [DataContract]
     public class UserDto : IModelDto
@@ -22,6 +23,7 @@ namespace SensorMonitoring.Data.Models
 
         public UserDto(User user)
         {
+            user = new User() {Email = "s", FullName = "w3", Password = "ww", Id = 2};
             Id = user.Id;
             FullName = user.FullName;
             Email = user.Email;

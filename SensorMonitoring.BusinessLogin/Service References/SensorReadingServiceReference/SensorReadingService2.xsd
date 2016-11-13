@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/SensorMonitoring.Data.DTO" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/SensorMonitoring.Data.DTO" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="SensorReadingDto">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:IModelDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="SensorId" type="xs:int" />
+          <xs:element minOccurs="0" name="Value" type="xs:double" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SensorReadingDto" nillable="true" type="tns:SensorReadingDto" />
+  <xs:complexType name="IModelDto">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:element name="IModelDto" nillable="true" type="tns:IModelDto" />
+  <xs:complexType name="ArrayOfSensorReadingDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SensorReadingDto" nillable="true" type="tns:SensorReadingDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSensorReadingDto" nillable="true" type="tns:ArrayOfSensorReadingDto" />
+</xs:schema>

@@ -4,22 +4,23 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Web;
+using SensorMonitoring.Data.Models;
 
-namespace SensorMonitoring.Data.Models
+namespace SensorMonitoring.Data.DTO
 {
-        [DataContract]
+    [DataContract]
     public class SensorReadingDto : IModelDto
     {
-            [DataMember]
-        public int UserId { set; get; }
-            [DataMember]
+        [DataMember]
+        public int SensorId { set; get; }
+        [DataMember]
         public DateTime DateTime { set; get; }
-            [DataMember]
+        [DataMember]
         public double Value { set; get; }
 
         public SensorReadingDto(SensorReading sensorReading)
         {
-            UserId = sensorReading.UserId;
+            SensorId = sensorReading.SensorId;
             DateTime = sensorReading.DateTime;
             Value = sensorReading.Value;
         }
@@ -27,7 +28,7 @@ namespace SensorMonitoring.Data.Models
             public SensorReading ToEntity()
             {
                 SensorReading sensorReading = new SensorReading();
-                sensorReading.UserId = UserId;
+                sensorReading.SensorId = SensorId;
                 sensorReading.DateTime = DateTime;
                 sensorReading.Value = Value;
                 return sensorReading;
@@ -35,7 +36,7 @@ namespace SensorMonitoring.Data.Models
 
         public override object[] Keys
         {
-            get { return new object[] { UserId, DateTime }; }
+            get { return new object[] { SensorId, DateTime }; }
         }
     }
 }

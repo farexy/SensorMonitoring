@@ -1,0 +1,5 @@
+D:\Дистанционное\АтППЗ\SensorMonitoring\SensorMonitoring\Test\bin\Debug\Test.exe.config
+D:\Дистанционное\АтППЗ\SensorMonitoring\SensorMonitoring\Test\bin\Debug\Test.exe
+D:\Дистанционное\АтППЗ\SensorMonitoring\SensorMonitoring\Test\bin\Debug\Test.pdb
+D:\Дистанционное\АтППЗ\SensorMonitoring\SensorMonitoring\Test\obj\Debug\Test.exe
+D:\Дистанционное\АтППЗ\SensorMonitoring\SensorMonitoring\Test\obj\Debug\Test.pdb

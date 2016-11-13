@@ -11,10 +11,10 @@ namespace SensorMonitoring.Data.Models
     {
         [Key, Column(Order = 1)]
         public int UserId { set; get; }
-        public User User { set; get; }
+        public virtual User User { set; get; }
         [Key, Column(Order = 2)]
         public int SensorId { set; get; }
-        public Sensor Sensor { set; get; }
+        public virtual Sensor Sensor { set; get; }
 
         public override object[] Keys { get { return new object[] { UserId, SensorId }; } }
     }

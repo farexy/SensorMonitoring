@@ -1,0 +1,11 @@
+D:\Дистанционное\АтППЗ\SensorMonitoring\SensorMonitoring\SensorMonitoring.DataService\bin\SensorMonitoring.DataService.dll.config
+D:\Дистанционное\АтППЗ\SensorMonitoring\SensorMonitoring\SensorMonitoring.DataService\bin\SensorMonitoring.DataService.dll
+D:\Дистанционное\АтППЗ\SensorMonitoring\SensorMonitoring\SensorMonitoring.DataService\bin\SensorMonitoring.DataService.pdb
+D:\Дистанционное\АтППЗ\SensorMonitoring\SensorMonitoring\SensorMonitoring.DataService\bin\SensorMonitoring.Data.dll
+D:\Дистанционное\АтППЗ\SensorMonitoring\SensorMonitoring\SensorMonitoring.DataService\bin\EntityFramework.dll
+D:\Дистанционное\АтППЗ\SensorMonitoring\SensorMonitoring\SensorMonitoring.DataService\bin\SensorMonitoring.Data.pdb
+D:\Дистанционное\АтППЗ\SensorMonitoring\SensorMonitoring\SensorMonitoring.DataService\bin\EntityFramework.xml
+D:\Дистанционное\АтППЗ\SensorMonitoring\SensorMonitoring\SensorMonitoring.DataService\bin\ru\EntityFramework.resources.dll
+D:\Дистанционное\АтППЗ\SensorMonitoring\SensorMonitoring\SensorMonitoring.DataService\obj\Debug\SensorMonitoring.DataService.csprojResolveAssemblyReference.cache
+D:\Дистанционное\АтППЗ\SensorMonitoring\SensorMonitoring\SensorMonitoring.DataService\obj\Debug\SensorMonitoring.DataService.dll
+D:\Дистанционное\АтППЗ\SensorMonitoring\SensorMonitoring\SensorMonitoring.DataService\obj\Debug\SensorMonitoring.DataService.pdb

@@ -16,7 +16,8 @@ namespace SensorMonitoring.Data.Models
         public double Limit { set; get; }
         public string Dimension { set; get; }
         public string Password { set; get; }
-        //[ForeignKey("UserId")]
+        
+        public int UserId { set; get; }
         public User Master { set; get; }
         public virtual ICollection<Subscription> Subscriptions { set; get; }
         public virtual ICollection<SensorReading> Readings { set; get; }

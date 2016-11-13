@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="e5b0f511-1f91-466d-a4df-75d7d64d4f06" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:61771/SensorService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SensorService.wsdl" MetadataType="Wsdl" ID="5545448e-eb60-49c0-851d-2a25cadcb726" SourceId="1" SourceUrl="http://localhost:61771/SensorService.svc?wsdl" />
+    <MetadataFile FileName="SensorService.disco" MetadataType="Disco" ID="8afce165-0b6e-49ed-b037-22b9a63ca9e3" SourceId="1" SourceUrl="http://localhost:61771/SensorService.svc?disco" />
+    <MetadataFile FileName="SensorService.xsd" MetadataType="Schema" ID="fc5baccc-9332-48c9-99c6-39c2c77e5fd0" SourceId="1" SourceUrl="http://localhost:61771/SensorService.svc?xsd=xsd2" />
+    <MetadataFile FileName="SensorService1.xsd" MetadataType="Schema" ID="4170959b-0582-4bfc-ab3f-0c9124d5c3a5" SourceId="1" SourceUrl="http://localhost:61771/SensorService.svc?xsd=xsd3" />
+    <MetadataFile FileName="SensorService2.xsd" MetadataType="Schema" ID="8c101037-da7f-477b-a81b-e25f7c4eb5dd" SourceId="1" SourceUrl="http://localhost:61771/SensorService.svc?xsd=xsd0" />
+    <MetadataFile FileName="SensorService3.xsd" MetadataType="Schema" ID="17d9866b-cb8e-4c46-bb6d-9b6f7ef3f386" SourceId="1" SourceUrl="http://localhost:61771/SensorService.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Web;
+using SensorMonitoring.Data.DAL;
+using SensorMonitoring.Data.Models;
 
-namespace SensorMonitoring.Data.Models
+namespace SensorMonitoring.Data.DTO
 {
     [DataContract]
-    public class SensorDto : IModel
+    public class SensorDto : IModelDto
     { 
         [DataMember]
         public int Id { set; get; }
@@ -23,8 +25,9 @@ namespace SensorMonitoring.Data.Models
         public string Dimension { set; get; }
         [DataMember]
         public string Password { set; get; }
+        
         [DataMember]
-        public UserDto Master { set; get; }
+        public int UserId { set; get; }
         //public virtual ICollection<SubscriptionDto> Subscriptions { set; get; }
         //public virtual ICollection<SensorReadingDto> Readings { set; get; }
 
@@ -32,6 +35,7 @@ namespace SensorMonitoring.Data.Models
 
         public SensorDto(Sensor sensor)
         {
+            //UserRepository repo = new UserRepository();
             Id = sensor.Id;
             Name = sensor.Name;
             Place = sensor.Place;
@@ -39,7 +43,8 @@ namespace SensorMonitoring.Data.Models
             Limit = sensor.Limit;
             Dimension = sensor.Dimension;
             Password = sensor.Password;
-            Master = new UserDto(sensor.Master);
+            UserId = sensor.UserId;
+            //Master = new UserDto(repo.GetUser(sensor.UserId));
         }
 
         public Sensor ToEntity()
@@ -52,7 +57,8 @@ namespace SensorMonitoring.Data.Models
             sensor.Limit = Limit;
             sensor.Dimension = Dimension;
             sensor.Password = Password;
-            sensor.Master = Master.ToEntity();
+            sensor.UserId = UserId;
+            //sensor.Master = Master.ToEntity();
             return sensor;
         }
     }

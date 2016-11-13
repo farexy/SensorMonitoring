@@ -4,7 +4,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.Web;
 
-namespace SensorMonitoring.Data.Models
+namespace SensorMonitoring.Data.DTO
 {
     [DataContract]
     public abstract class IModelDto

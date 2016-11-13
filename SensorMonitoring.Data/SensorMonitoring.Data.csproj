@@ -19,6 +19,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -76,19 +77,15 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\sensors_database.mdf" />
-    <Content Include="App_Data\sensors_database_log.ldf">
-      <DependentUpon>sensors_database.mdf</DependentUpon>
-    </Content>
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAL\IRepository.cs" />
     <Compile Include="DAL\Repository.cs" />
     <Compile Include="DAL\UserRepository.cs" />
-    <Compile Include="Migrations\201610311536595_Db created.cs" />
-    <Compile Include="Migrations\201610311536595_Db created.Designer.cs">
-      <DependentUpon>201610311536595_Db created.cs</DependentUpon>
+    <Compile Include="Migrations\201611062210025_errors resolved.cs" />
+    <Compile Include="Migrations\201611062210025_errors resolved.Designer.cs">
+      <DependentUpon>201611062210025_errors resolved.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -100,9 +97,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201610311536595_Db created.resx">
-      <DependentUpon>201610311536595_Db created.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201611062210025_errors resolved.resx">
+      <DependentUpon>201611062210025_errors resolved.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

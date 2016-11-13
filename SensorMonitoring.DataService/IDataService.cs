@@ -5,24 +5,28 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
+using SensorMonitoring.Data.DTO;
 using SensorMonitoring.Data.Models;
 
 namespace SensorMonitoring.DataService
 {
     // ПРИМЕЧАНИЕ. Команду "Переименовать" в меню "Рефакторинг" можно использовать для одновременного изменения имени интерфейса "IService1" в коде и файле конфигурации.
     [ServiceContract]
-    public interface IDataService
+    public interface IDataService<T> where T : IModelDto
     {
 
         [OperationContract]
-        IModel GetItem(object[] keys);
+        T GetItem(object[] keys);
 
         [OperationContract]
-        IModelDto GetDataUsingDataContract(IModelDto       composite);
+        IEnumerable<T> Get();
 
-        // TODO: Добавьте здесь операции служб
+        [OperationContract]
+        void UpdateItem(T item);
+
+        [OperationContract]
+        void AddItem(T item);
+
+        //[OperationContract]
     }
-
-
-    
 }
