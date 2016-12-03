@@ -1,0 +1,127 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="container my-container" ng-app="RequestApp" ng-controller="main">
+    <div class="row container-row">
+        <div class="col-lg-offset-4 row">
+            <label class="text-info text-italic">
+                Enter api request basic url 
+            </label>
+            <input type="text" class="form-control display-inline" placeholder="url" ng-model="url" />
+        </div>
+    </div>
+
+    <div class="row container-row">
+
+        <div class="col-lg-6 left-block">
+
+            <h3>
+                Parameters
+            </h3>
+
+            <div class="url-parameter" ng-repeat="param in parameters">
+                {{ param.Name }}='{{ param.Value }}'
+                <div class="float-right">
+                    <button class="btn btn-info" ng-click="editParameter(param)">
+                        <span class="glyphicon glyphicon-edit"></span>
+                    </button>
+                    <button class="btn btn-danger" ng-click="deleteParameter(param)">
+                        <span class="glyphicon glyphicon-remove"></span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-5 padding-3">
+                    <input type="text" class="form-control display-inline" placeholder="parameter Name"
+                           ng-model="parameter.Name" />
+                </div>
+                <div class="col-lg-5 padding-3">
+                    <input type="text" class="form-control display-inline" placeholder="value"
+                           ng-model="parameter.Value" />
+                </div>
+                <div class="col-lg-2 padding-left-10">
+                    <input type="button" class="btn btn-info display-inline" value="Save" ng-click="addParameter()" />
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 center-block">
+            <h3>
+                Chose request type
+            </h3>
+            <div class="list-group">
+                <a class="list-group-item" ng-class="Type == 'GET' ? 'active' : ''" ng-click="Type = 'GET'">
+                    GET
+                </a>
+                <a class="list-group-item" ng-class="Type == 'POST' ? 'active' : ''" ng-click="Type = 'POST'">
+                    POST
+                </a>
+                <a class="list-group-item" ng-class="Type == 'PUT' ? 'active' : ''" ng-click="Type = 'PUT'">
+                    PUT
+                </a>
+                <a class="list-group-item" ng-class="Type == 'DELETE' ? 'active' : ''" ng-click="Type = 'DELETE'">
+                    DELETE
+                </a>
+            </div>
+        </div>
+
+        <div class="col-lg-3 right-block">
+            <h4>
+                Request configuration
+            </h4>
+            <div class="row">
+                <input type="text" class="col-lg-offset-1 col-lg-6 form-control" placeholder="Save name" ng-model="RequestName"
+                       list="names" />
+            </div>
+
+            <datalist id="names">
+                <option ng-repeat="name in names">
+                    {{ name }}
+                </option>
+            </datalist>
+
+            <div class="row text-center margin-top-5">
+                <button type="button" class="btn btn-info" ng-click="saveRequest()">
+                    Save
+                </button>
+                <button type="button" class="btn btn-info" ng-click="loadRequest()">
+                    Load 
+                </button>
+            </div>
+        </div>
+
+    </div>
+    
+    <div class="row text-center container-row">
+        <button class="btn btn-success" ng-disabled="!checkUrl()" ng-click="sendRequest()">
+            Send request
+        </button>
+    </div>
+
+    <div class="row" ng-hide="Response == null" >
+        <div class="res-url" >
+            {{ Response.Url }}
+        </div>
+
+        <div class="res-measure">
+            {{ Response.EllapsedMilliseconds }} ms
+        </div>
+
+        <div class="res-text">
+            {{ Response.Content }}
+        </div>
+    </div>
+
+</div>
+
+@section Scripts {
+    <script src="~/Scripts/AngularApp/Library/RequestParameter.js"></script>
+    <script src="~/Scripts/AngularApp/Library/RequestStorage.js"></script>
+
+    <script src="~/Scripts/angular.min.js"> </script>
+    
+    <script src="~/Scripts/AngularApp/app.js"></script>
+    <script src="~/Scripts/AngularApp/Controllers/mainController.js"></script>    
+}

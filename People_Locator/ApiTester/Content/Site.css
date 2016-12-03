@@ -1,0 +1,96 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+
+.text-italic {
+    font-style: italic;
+}
+
+.display-inline {
+    display: inline-block;
+}
+
+.my-container {
+    margin-top: 30px;
+}
+
+.container-row {
+    margin-bottom: 20px;
+    border-bottom: 5px solid #fafafa;
+    padding-bottom: 10px;
+}
+
+a.list-group-item {
+    max-width: 200px;
+}
+
+.padding-3 {
+    padding: 3px !important;
+}
+
+.padding-left-10 {
+    padding-left: 10px;
+}
+
+.right-block {
+    padding: 15px;
+}
+
+.center-block {
+    border-left: 5px solid #fafafa;
+    border-right: 5px solid #fafafa;
+}
+
+.url-parameter {
+    margin: 5px;
+    font-weight: bolder;
+    font-style: italic;
+}
+
+.res-url {
+    float: left;
+    font-weight: bolder;
+}
+
+.res-measure {
+    float: right;
+    font-style: italic;
+}
+
+.res-text {
+    background-color: #eee;
+    clear: both;
+    border-radius: 25px;
+    padding: 15px;
+}
+
+.float-right {
+    margin-left: 10px;
+    margin-bottom: 5px;
+    display: inline;
+}
+.margin-top-5 {
+    margin-top: 5px;
+}

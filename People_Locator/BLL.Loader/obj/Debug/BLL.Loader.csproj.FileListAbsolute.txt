@@ -1,0 +1,10 @@
+D:\Projects\C#\People-Locator\People_Locator\BLL.Loader\bin\Debug\BLL.Loader.dll
+D:\Projects\C#\People-Locator\People_Locator\BLL.Loader\bin\Debug\BLL.Loader.pdb
+D:\Projects\C#\People-Locator\People_Locator\BLL.Loader\bin\Debug\Autofac.dll
+D:\Projects\C#\People-Locator\People_Locator\BLL.Loader\bin\Debug\Newtonsoft.Json.dll
+D:\Projects\C#\People-Locator\People_Locator\BLL.Loader\bin\Debug\Autofac.xml
+D:\Projects\C#\People-Locator\People_Locator\BLL.Loader\bin\Debug\Newtonsoft.Json.xml
+D:\Projects\C#\People-Locator\People_Locator\BLL.Loader\obj\Debug\BLL.Loader.csprojResolveAssemblyReference.cache
+D:\Projects\C#\People-Locator\People_Locator\BLL.Loader\obj\Debug\BLL.Loader.dll
+D:\Projects\C#\People-Locator\People_Locator\BLL.Loader\obj\Debug\BLL.Loader.pdb
+D:\Projects\C#\People-Locator\People_Locator\BLL.Loader\bin\Debug\config.xml

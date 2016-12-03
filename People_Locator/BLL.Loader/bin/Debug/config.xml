@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sections>
+  <dal>
+    <baseAddress>
+      http://localhost:4241/api/
+    </baseAddress>
+  </dal>
+</sections> 
