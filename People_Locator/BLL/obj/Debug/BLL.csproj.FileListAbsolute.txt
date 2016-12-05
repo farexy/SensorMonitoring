@@ -22,3 +22,15 @@ D:\Дистанционное\АтППЗ\People-Locator\People_Locator\BLL\bin\D
 D:\Дистанционное\АтППЗ\People-Locator\People_Locator\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
 D:\Дистанционное\АтППЗ\People-Locator\People_Locator\BLL\obj\Debug\BLL.dll
 D:\Дистанционное\АтППЗ\People-Locator\People_Locator\BLL\obj\Debug\BLL.pdb
+D:\Дистанционное\АтППЗ\SM\People_Locator\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+D:\Дистанционное\АтППЗ\SM\People_Locator\BLL\obj\Debug\BLL.dll
+D:\Дистанционное\АтППЗ\SM\People_Locator\BLL\obj\Debug\BLL.pdb
+D:\Дистанционное\АтППЗ\SM\People_Locator\BLL\bin\Debug\BLL.dll
+D:\Дистанционное\АтППЗ\SM\People_Locator\BLL\bin\Debug\BLL.pdb
+D:\Дистанционное\АтППЗ\SM\People_Locator\BLL\bin\Debug\Autofac.dll
+D:\Дистанционное\АтППЗ\SM\People_Locator\BLL\bin\Debug\BLL.Loader.dll
+D:\Дистанционное\АтППЗ\SM\People_Locator\BLL\bin\Debug\DevOne.Security.Cryptography.BCrypt.dll
+D:\Дистанционное\АтППЗ\SM\People_Locator\BLL\bin\Debug\Newtonsoft.Json.dll
+D:\Дистанционное\АтППЗ\SM\People_Locator\BLL\bin\Debug\BLL.Loader.pdb
+D:\Дистанционное\АтППЗ\SM\People_Locator\BLL\bin\Debug\Autofac.xml
+D:\Дистанционное\АтППЗ\SM\People_Locator\BLL\bin\Debug\Newtonsoft.Json.xml

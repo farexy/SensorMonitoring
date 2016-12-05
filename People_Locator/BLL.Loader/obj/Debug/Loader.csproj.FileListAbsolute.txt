@@ -16,3 +16,12 @@ D:\Дистанционное\АтППЗ\People-Locator\People_Locator\BLL.Loade
 D:\Дистанционное\АтППЗ\People-Locator\People_Locator\BLL.Loader\obj\Debug\Loader.csprojResolveAssemblyReference.cache
 D:\Дистанционное\АтППЗ\People-Locator\People_Locator\BLL.Loader\obj\Debug\BLL.Loader.dll
 D:\Дистанционное\АтППЗ\People-Locator\People_Locator\BLL.Loader\obj\Debug\BLL.Loader.pdb
+D:\Дистанционное\АтППЗ\SM\People_Locator\BLL.Loader\bin\Debug\BLL.Loader.dll
+D:\Дистанционное\АтППЗ\SM\People_Locator\BLL.Loader\bin\Debug\BLL.Loader.pdb
+D:\Дистанционное\АтППЗ\SM\People_Locator\BLL.Loader\bin\Debug\Autofac.dll
+D:\Дистанционное\АтППЗ\SM\People_Locator\BLL.Loader\bin\Debug\Newtonsoft.Json.dll
+D:\Дистанционное\АтППЗ\SM\People_Locator\BLL.Loader\bin\Debug\Autofac.xml
+D:\Дистанционное\АтППЗ\SM\People_Locator\BLL.Loader\bin\Debug\Newtonsoft.Json.xml
+D:\Дистанционное\АтППЗ\SM\People_Locator\BLL.Loader\obj\Debug\Loader.csprojResolveAssemblyReference.cache
+D:\Дистанционное\АтППЗ\SM\People_Locator\BLL.Loader\obj\Debug\BLL.Loader.dll
+D:\Дистанционное\АтППЗ\SM\People_Locator\BLL.Loader\obj\Debug\BLL.Loader.pdb

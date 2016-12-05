@@ -20,9 +20,9 @@ namespace DAL.Repositories
             db.SaveChanges();
         }
 
-        public bool Delete(int id)
+        public bool Delete(object[] keys)
         {
-            T item = db.Set<T>().Find(id);
+            T item = db.Set<T>().Find(keys);
 
             if (item != null)
             {
@@ -33,6 +33,11 @@ namespace DAL.Repositories
             {
                 return false;
             }
+        }
+
+        public bool Delete(int id)
+        {
+            return Delete(new object[] {id});
         }
 
         public IEnumerable<T> Find(Func<T, bool> predicate)

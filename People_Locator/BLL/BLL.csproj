@@ -58,6 +58,9 @@
     <Compile Include="Services\BaseService.cs" />
     <Compile Include="Services\IService.cs" />
     <Compile Include="Services\IUserService.cs" />
+    <Compile Include="Services\SensorReadingService.cs" />
+    <Compile Include="Services\SensorService.cs" />
+    <Compile Include="Services\SubscriptionService.cs" />
     <Compile Include="Services\UserService.cs" />
     <Compile Include="Validation\IValidator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

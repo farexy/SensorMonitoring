@@ -11,6 +11,7 @@ namespace DAL.Repositories
         IEnumerable<T> Find(Func<T, bool> predicate);
         void Add(T item);
         void Update(T item);
+        bool Delete(object[] keys);
         bool Delete(int id);
 
         void SaveChanges();

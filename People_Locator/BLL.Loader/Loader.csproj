@@ -53,6 +53,9 @@
     <Compile Include="DI\LoaderModule.cs" />
     <Compile Include="DTO\BaseDTO.cs" />
     <Compile Include="DTO\CUDResponseView.cs" />
+    <Compile Include="DTO\SensorDTO.cs" />
+    <Compile Include="DTO\SensorReadingDTO.cs" />
+    <Compile Include="DTO\SubscriptionDTO.cs" />
     <Compile Include="DTO\UserDTO.cs" />
     <Compile Include="HttpLoader\HttpLoader.cs" />
     <Compile Include="ILoader.cs" />

@@ -12,6 +12,7 @@ namespace BLL.Services
         IEnumerable<T> Find(Func<T, bool> predicate);
         void Create(T item);
         void Update(T item);
+        void Delete(object[] keys);
         void Delete(int id);
     }
 }
