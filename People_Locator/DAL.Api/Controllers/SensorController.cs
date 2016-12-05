@@ -30,12 +30,18 @@ namespace DAL.Api.Controllers
             return repo.Find(s => s.UserId == userId);
         } 
 
+        [System.Web.Http.HttpGet]
         public Sensor GetSensor(int id)
         {
             return repo.Find(s => s.Id == id).FirstOrDefault();
         }
 
-        [System.Web.Http.HttpPut]
+        public IEnumerable<Sensor> GetSensors()
+        {
+            return repo.Find(s => true);
+        }
+            
+            [System.Web.Http.HttpPut]
         public bool UpdateSensor(Sensor model)
         {
             if (model == null) { return false; }

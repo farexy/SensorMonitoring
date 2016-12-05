@@ -7,7 +7,7 @@ import logo from './../favicon.png';
 import './../Styles/Header.css';
 import Registration from './Registration';
 import Login from './Login';
-import SensorEditor from './SensorEditor';
+import SensorList from './SensorList';
 import App from './App';
 
 class Header extends Component {
@@ -35,7 +35,7 @@ class Header extends Component {
     }
 
     openSensorEditor(){
-        Header.open(<SensorEditor method='POST' url='http://localhost:24688/api/'/> )
+        Header.open(<SensorList url='http://localhost:24688/api/sensor/' masterId='1'/> )
     }
 
     static open(component){

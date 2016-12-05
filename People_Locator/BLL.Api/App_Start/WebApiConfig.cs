@@ -20,6 +20,7 @@ namespace BLL.Api
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+            config.Formatters.Remove(config.Formatters.XmlFormatter);
 
             var cors = new EnableCorsAttribute("http://localhost:5116,http://localhost:24688", "*", "*");
             config.EnableCors(cors);

@@ -5,6 +5,7 @@ import React, { Component } from 'react';
 import './../Styles/App.css';
 import './../Styles/forms.css';
 import Header from './Header';
+import SensorList from './SensorList';
 import $ from 'jquery';
 import Session from './../Session'
 
@@ -13,24 +14,46 @@ class SensorEditor extends Component {
     constructor(props, content) {
         super(props, content);
 
-        this.state = {
-            name: "",
-            place: "",
-            substance: "",
-            limit: "",
-            dimension: "",
-            password: "",
-            nameErr: "",
-            placeErr: "",
-            substanceErr: "",
-            limitErr: "",
-            dimensionErr: "",
-            passwordErr: ""
-        }
+        if(props.sensor != null) {
+            if(this.props.sensor.Place == null)
+                this.props.sensor.Place = "";
+            this.state = {
+                name: this.props.sensor.Name,
+                place: this.props.sensor.Place,
+                substance: this.props.sensor.Substance,
+                limit: this.props.sensor.Limit.toString(),
+                dimension: this.props.sensor.Dimension,
+                password: this.props.sensor.Password,
+                nameErr: "",
+                placeErr: "",
+                substanceErr: "",
+                limitErr: "",
+                dimensionErr: "",
+                passwordErr: ""
+            }
+        } else
+            {
+                this.state = {
+                    name: '',
+                    place: '',
+                    substance: '',
+                    limit: '',
+                    dimension: '',
+                    password: '',
+                    nameErr: "",
+                    placeErr: "",
+                    substanceErr: "",
+                    limitErr: "",
+                    dimensionErr: "",
+                    passwordErr: ""
+                }
+            }
     }
 
 
     render() {
+        if(this.props.sensor != null)
+            var component = <button className = 'delete-button' onClick = {this.delete}> Delete  < / button >;
         return (
             < div
         className = "SensorEditor" >
@@ -62,10 +85,8 @@ class SensorEditor extends Component {
         type = "text"
         name = "place"
         placeholder = "Place"
-        onChange = {this.handlePlaceChange
-    }
-        value = {this.state.place
-    }
+        onChange = {this.handlePlaceChange}
+        value = {this.state.place}
     /><
         br / >
         < span
@@ -118,22 +139,20 @@ class SensorEditor extends Component {
         type = "password"
         name = "password"
         placeholder = "Password"
-        onChange = {this.handlePasswordChange
-    }
-        value = {this.state.password
-    }
+        onChange = {this.handlePasswordChange}
+        value = {this.state.password}
     /><
         br / >
         < span
-        className = 'alert-text' > {this.state.passwordErr
-    }</
-        span > < br / >
+        className = 'alert-text' > {this.state.passwordErr}
+    </ span > < br / >
         < input
         type = "submit"
         className = "login loginmodal-submit"
         value = "Save"
             / > < br / >
             < / form >
+            {component}
             < / div >
             < / div >
     )
@@ -201,6 +220,42 @@ class SensorEditor extends Component {
             this.post();
     }
 
+    loadData = () => {
+        $.ajax({
+            url: this.props.url + 'getSensor?id=' + this.props.sensorId,
+            dataType: 'json',
+            type: 'GET',
+            success: (function (response) {
+                if(response != null){
+                    this.setState({
+                        name: response.Name,
+                        place: response.Place,
+                        substance: response.Substance,
+                        limit: response.Limit,
+                        dimension: response.Dimension,
+                        password: response.Password,
+                    })
+                }
+
+            }).bind(this)
+        });
+    }
+
+    delete = () =>{
+        $.ajax({
+            url: this.props.url + 'delete?id=' + this.props.sensor.Id,
+            type: 'DELETE',
+            success: (function (response) {
+                if (response.IsSuccess) {
+                    console.log(response);
+                    Header.open(<SensorList url='http://localhost:24688/api/sensor/' masterId='1'/>);
+
+                } else console.log(response)
+
+            }).bind(this)
+        });
+    }
+
     post = () => {
         var name = this.state.name.trim();
         var password = this.state.password.trim();
@@ -208,24 +263,31 @@ class SensorEditor extends Component {
         var limit = this.state.limit;
         var dimension = this.state.dimension.trim();
         var substance = this.state.substance.trim();
-
+        var userId = this.props.masterId;
+        if(this.props.sensor != null)
+            var id = this.props.sensor.Id;
+        else
+            var id = 0;
 
         var data = {
+            "id": id,
             "name": name,
             "password": password,
             "place": place,
             "limit": limit,
             "dimension": dimension,
-            "substance": substance
+            "substance": substance,
+            "userId": userId
         }
         $.ajax({
-            url: this.props.url,
+            url: this.props.url + this.props.method,
             dataType: 'json',
-            type: this.props.method,
+            type: 'POST',
             data: data,
             success: (function (response) {
                 if (response.IsSuccess) {
                     console.log(response);
+                    Header.open(<SensorList url='http://localhost:24688/api/sensor/' masterId='1'/>);
 
                 } else console.log(response)
 

@@ -13,6 +13,7 @@ namespace SL.Controllers
         private ILoader<SensorDTO> loader = (ILoader<SensorDTO>)System.Web.Mvc.DependencyResolver.Current.GetService(typeof(ILoader<SensorDTO>));
 
         [System.Web.Http.HttpPost]
+        [System.Web.Http.Route("api/sensor/create")]
         public CUDResponseView CreateSensor(SensorDTO model)
         {
             try
@@ -26,6 +27,8 @@ namespace SL.Controllers
             return CUDResponseView.BuildSuccessResponse();
         }
 
+        [System.Web.Http.HttpGet]
+        [System.Web.Http.Route("api/sensor/getSensorsByMasterId")]
         public IEnumerable<SensorDTO> GetSensorsByMasterId(int userId)
         {
             return loader.LoadAll().Where(s => s.UserId == userId);
@@ -36,7 +39,8 @@ namespace SL.Controllers
             return loader.LoadById(id);
         }
 
-        [System.Web.Http.HttpPut]
+        [System.Web.Http.HttpPost]
+        [System.Web.Http.Route("api/sensor/update")]
         public CUDResponseView UpdateSensor(SensorDTO model)
         {
             try

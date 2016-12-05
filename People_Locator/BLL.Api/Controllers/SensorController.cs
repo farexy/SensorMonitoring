@@ -28,15 +28,16 @@ namespace DAL.Api.Controllers
             return CUDResponseView.BuildSuccessResponse();
         }
 
-        public IEnumerable<SensorDTO> GetSensorsByMasterId(int userId)
-        {
-            return service.Find(s => s.UserId == userId);
-        } 
-
-        public SensorDTO GetSensor(int id)
+        public SensorDTO Get(int id)
         {
             return service.Find(s => s.Id == id).FirstOrDefault();
         }
+
+        public IEnumerable<SensorDTO> GetSensors()
+        {
+            return service.Find(s => true);
+        }
+
 
         [System.Web.Http.HttpPut]
         public CUDResponseView UpdateSensor(SensorDTO model)

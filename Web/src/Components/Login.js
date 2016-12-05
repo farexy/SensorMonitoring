@@ -5,6 +5,7 @@ import React, { Component } from 'react';
 import './../Styles/App.css';
 import './../Styles/forms.css';
 import Header from './Header';
+import Session from './../Session'
 import $ from 'jquery';
 import App from './App'
 
@@ -75,6 +76,7 @@ class Login extends Component {
             success: (function(response){
                 if(response != null) {
                     console.log(response);
+                    //Session.setAuthenticatedUser(response);
                     Header.open(<App user={response.FullName}/>)
                 } else this.setState({error:"Login or password are incorrect"})
 

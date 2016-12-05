@@ -32,6 +32,7 @@ namespace BLL.DI
 
             builder.RegisterModule(new LoaderModule(ConfigPath));
             builder.RegisterType<UserValidator>().As<IValidator<UserDTO>>();
+            builder.RegisterType<SensorValidator>().As<IValidator<SensorDTO>>();
 
             return builder.Build();
         }
