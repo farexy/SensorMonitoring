@@ -53,6 +53,20 @@ namespace DAL.Api.Controllers
         }
 
         [System.Web.Http.HttpDelete]
+        public bool DeleteSensor(object[] ids)
+        {
+            //bool result = repo.Delete(new object[] {id});
+            bool result = repo.Delete(ids);
+
+            if (result)
+            {
+                repo.SaveChanges();
+            }
+
+            return result;
+        }
+
+        [System.Web.Http.HttpDelete]
         public bool DeleteSensor(int id)
         {
             //bool result = repo.Delete(new object[] {id});
@@ -65,7 +79,5 @@ namespace DAL.Api.Controllers
 
             return result;
         }
-
-
     }
 }

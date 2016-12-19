@@ -13,6 +13,7 @@ namespace BLL.Loader
         T LoadById(int id);
         CUDResponseView PostItem(T item);
         CUDResponseView PutItem(T item);
+        CUDResponseView DeleteItem(object[] ids);
         CUDResponseView DeleteItem(int id);
     }
 }

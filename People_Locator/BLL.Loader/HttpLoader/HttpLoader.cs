@@ -43,6 +43,13 @@ namespace BLL.Loader.HttpLoader
             return JsonConvert.DeserializeObject<CUDResponseView>(content);
         }
 
+        public CUDResponseView DeleteItem(object[] ids)
+        {
+            string array = ids.Aggregate("", (current, id) => current + ("ids=" + id + "&"));
+            HttpRequestMessage req = new HttpRequestMessage(HttpMethod.Delete, this.url + "?" + array);
+            return this.sendCUDRequest(req);
+        }
+
         public CUDResponseView DeleteItem(int id)
         {
             HttpRequestMessage req = new HttpRequestMessage(HttpMethod.Delete, this.url + "?id=" + id);
@@ -73,7 +80,7 @@ namespace BLL.Loader.HttpLoader
                 response = client.SendAsync(req).Result;
             }
 
-            return JsonConvert.DeserializeObject<T>(response.Content.ReadAsStringAsync().Result);
+             return JsonConvert.DeserializeObject<T>(response.Content.ReadAsStringAsync().Result);
         }
 
         public CUDResponseView PostItem(T item)

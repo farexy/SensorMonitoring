@@ -9,6 +9,7 @@ namespace SensorMonitoring.Data.Models
 {
     public class Subscription : IModel
     {
+        //public int SubscriptionId { set; get; }
         [Key, Column(Order = 1)]
         public int UserId { set; get; }
         public virtual User User { set; get; }

@@ -44,7 +44,8 @@ namespace SL.Controllers
             return loader.PostItem(user);
         }
 
-        [HttpPut]
+        [HttpPost]
+        [Route("api/user/update")]
         public CUDResponseView UpdateUser(UserDTO user)
         {
             if (user == null) { return null; }
@@ -60,7 +61,7 @@ namespace SL.Controllers
                 return null;
             }
 
-            return loader.DeleteItem(id);
+            return loader.DeleteItem(new object[] {id});
         }
     }
 }

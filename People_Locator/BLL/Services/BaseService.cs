@@ -33,16 +33,16 @@ namespace BLL.Services
         //change
         public void Delete(object[] keys)
         {
-            if (!validator.CanDelete((int)keys[0]))
+            /*if (!validator.CanDelete((int)keys[0]))
             {
-                throw new ValidationException("No entity with given id");
-            }
+                throw new ValidationException("No entity with given id"); 
+            }*/
 
-            CUDResponseView result = loader.DeleteItem((int)keys[0]);
+            CUDResponseView result = loader.DeleteItem(keys);
 
             if (!result.IsSuccess)
             {
-                throw new DALException("Cannot delete item");
+                //throw new DALException("Cannot delete item");
             }
         }
 

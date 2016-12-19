@@ -39,3 +39,15 @@ D:\Дистанционное\АтППЗ\SM\People_Locator\DAL\bin\Debug\EntityF
 D:\Дистанционное\АтППЗ\SM\People_Locator\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
 D:\Дистанционное\АтППЗ\SM\People_Locator\DAL\obj\Debug\DAL.dll
 D:\Дистанционное\АтППЗ\SM\People_Locator\DAL\obj\Debug\DAL.pdb
+D:\Дистанционное\АтППЗ\temp\People_Locator\DAL\bin\Debug\DAL.dll.config
+D:\Дистанционное\АтППЗ\temp\People_Locator\DAL\bin\Debug\DAL.dll
+D:\Дистанционное\АтППЗ\temp\People_Locator\DAL\bin\Debug\DAL.pdb
+D:\Дистанционное\АтППЗ\temp\People_Locator\DAL\bin\Debug\Autofac.dll
+D:\Дистанционное\АтППЗ\temp\People_Locator\DAL\bin\Debug\EntityFramework.dll
+D:\Дистанционное\АтППЗ\temp\People_Locator\DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\Дистанционное\АтППЗ\temp\People_Locator\DAL\bin\Debug\Autofac.xml
+D:\Дистанционное\АтППЗ\temp\People_Locator\DAL\bin\Debug\EntityFramework.xml
+D:\Дистанционное\АтППЗ\temp\People_Locator\DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\Дистанционное\АтППЗ\temp\People_Locator\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+D:\Дистанционное\АтППЗ\temp\People_Locator\DAL\obj\Debug\DAL.dll
+D:\Дистанционное\АтППЗ\temp\People_Locator\DAL\obj\Debug\DAL.pdb

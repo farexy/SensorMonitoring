@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Web.Http;
 using System.Web.Mvc;
@@ -25,9 +26,16 @@ namespace SL.Controllers
             return CUDResponseView.BuildSuccessResponse();
         }
 
-        public SensorReadingDTO GetSensorReading(int id)
+        [System.Web.Http.HttpGet]
+        [System.Web.Http.Route("api/sensorreading/getBySensorId")]
+        public double GetSensorReading(int sensorId)
         {
-            return loader.LoadById(id);
+            return loader.LoadById(sensorId).Value;
+        }
+
+        public IEnumerable<SensorReadingDTO> GetReadings()
+        {
+            return loader.LoadAll();
         }
 
         [System.Web.Http.HttpPut]
@@ -49,7 +57,7 @@ namespace SL.Controllers
         {
             try
             {
-                loader.DeleteItem(id);
+                //loader.DeleteItem(id);
             }
             catch (ValidationException e)
             {

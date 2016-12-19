@@ -5,9 +5,9 @@ import React, { Component } from 'react';
 import './../Styles/App.css';
 import './../Styles/forms.css';
 import Header from './Header';
-import Session from './../Session'
 import $ from 'jquery';
 import App from './App'
+import {USER_URL} from './../URL'
 
 class Login extends Component {
 
@@ -41,7 +41,12 @@ class Login extends Component {
         value={this.state.password}
         onChange={this.handlePasswordChange}
     />
-        <input type="submit" name="login" className="login loginmodal-submit" value="Login"/>
+        <input 
+            type="submit"
+            name="login"
+            className="login loginmodal-submit"
+            value="Login"
+        />
         <h3 className='alert-text'>{this.state.error}</h3>
         </form>
         </div>
@@ -69,15 +74,16 @@ class Login extends Component {
             "password": password
         }
         $.ajax({
-            url: this.props.url,
+            url: USER_URL + 'login',
             dataType: 'json',
             type: 'POST',
             data: data,
             success: (function(response){
                 if(response != null) {
-                    console.log(response);
-                    //Session.setAuthenticatedUser(response);
-                    Header.open(<App user={response.FullName}/>)
+                    //console.log(response);
+                    localStorage.setItem('user', response)
+                    console.log(localStorage.getItem('user'))
+                    Header.open(<App user={response}/>)
                 } else this.setState({error:"Login or password are incorrect"})
 
             }).bind(this)

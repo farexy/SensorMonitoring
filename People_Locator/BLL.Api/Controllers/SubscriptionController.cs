@@ -26,12 +26,12 @@ namespace BLL.Api.Controllers
             return CUDResponseView.BuildSuccessResponse();
         }
 
-        public IEnumerable<SubscriptionDTO> GetSensorsByUserId(int userId)
+        [System.Web.Http.HttpGet]
+        public IEnumerable<SubscriptionDTO> GetSubscriptions()
         {
-            return null;
-            // return service.Find(s => s.UserId == userId).Select(s => s.Sensor);
+            return service.Find(s => true);
         }
-
+        
         public SubscriptionDTO GetSubscription(int userId, int sensorId)
         {
             return service.Find(s => s.SensorId == sensorId && s.UserId == userId).FirstOrDefault();
@@ -52,11 +52,11 @@ namespace BLL.Api.Controllers
         }
 
         [System.Web.Http.HttpDelete]
-        public CUDResponseView DeleteSubscription(int userId, int sensorId)
+        public CUDResponseView DeleteSubscription([FromUri]object[] ids)
         {
             try
             {
-                service.Delete(new object[] { userId, sensorId });
+                service.Delete(ids);
             }
             catch (ValidationException ex)
             {

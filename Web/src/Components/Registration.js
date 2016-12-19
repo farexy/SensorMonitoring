@@ -10,6 +10,7 @@ import $ from 'jquery';
 import Session from './../Session'
 import User from './../Models/User'
 import App from './App'
+import {USER_URL} from './../URL'
 
 class Registration extends Component {
 
@@ -116,15 +117,14 @@ class Registration extends Component {
             "fullName": fullName
         }
         $.ajax({
-            url: this.props.url,
+            url: USER_URL + 'register',
             dataType: 'json',
             type: 'POST',
             data: data,
             success: (function(response){
                 if(response.IsSuccess) {
-                    console.log(response);
-                    Header.open(<App user={this.state.fullName}/>)
-                } else this.setState({error:"Login or password are incorrect"})
+                    Header.open(<App user={response}/>)
+                } else this.setState({error:"Error"})
 
             }).bind(this)
         });

@@ -1,6 +1,6 @@
 .loginmodal-container{
     padding: 30px;
-    max-width: 350px;
+    max-width: 500px;
     width: 100% !important;
     background-color: #F7F7F7;
     margin: 0 auto;
@@ -92,4 +92,36 @@
 .alert-text{
     color: red;
     font-family: "Segoe UI";
+}
+
+.search-button{
+    width: 50px;
+    height: 50px;
+    background-color: #3a33d1;
+    border: 0px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    -webkit-appearance: none;
+    border-top: 1px solid #c0c0c0;
+    padding: 0 8px;
+}
+
+.search-ico{
+    width: 98%;
+    height: 90%;
+}
+
+.text-input{
+    height: 44px;
+    font-size: 16px;
+    width: 75%;
+    margin-bottom: 10px;
+    -webkit-appearance: none;
+    background: #fff;
+    border: 1px solid #d9d9d9;
+    border-top: 1px solid #c0c0c0;
+    padding: 0 8px;
+    /* border-radius: 2px;
+    //box-sizing: border-box;
+    -moz-box-sizing: border-box;*/
 }

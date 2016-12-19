@@ -28,6 +28,14 @@ namespace SL.Controllers
         }
 
         [System.Web.Http.HttpGet]
+        [System.Web.Http.Route("api/sensor/search")]
+        public IEnumerable<SensorDTO> SearchSensors(string value)
+        {
+            if (value == null) value = "";
+            return loader.LoadAll().Where(s => s.Id.ToString() == value || s.Name.ToLower().Contains(value.ToLower()));
+        }
+            
+        [System.Web.Http.HttpGet]
         [System.Web.Http.Route("api/sensor/getSensorsByMasterId")]
         public IEnumerable<SensorDTO> GetSensorsByMasterId(int userId)
         {
@@ -54,7 +62,8 @@ namespace SL.Controllers
             return CUDResponseView.BuildSuccessResponse();
         }
 
-        [System.Web.Http.HttpDelete]
+        [System.Web.Http.HttpGet]
+        [System.Web.Http.Route("api/sensor/delete")]
         public CUDResponseView DeleteSensor(int id)
         {
             try

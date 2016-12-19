@@ -26,9 +26,9 @@ namespace DAL.Api.Controllers
             return true;
         }
 
-        public IEnumerable<Sensor> GetSensorsByUserId(int userId)
+        public IEnumerable<Subscription> GetSubscriptions()
         {
-            return repo.Find(s => s.UserId == userId).Select(s => s.Sensor);
+            return repo.Find(s => true);
         }
 
         public Subscription GetSubscription(int userId, int sensorId)
@@ -48,10 +48,10 @@ namespace DAL.Api.Controllers
         }
 
         [System.Web.Http.HttpDelete]
-        public bool DeleteSubscription(int userId, int sensorId)
+        public bool DeleteSubscription([FromUri]int[] ids)
         {
             //bool result = repo.Delete(new object[] {userId, sensorId });
-            bool result = repo.Delete(userId);
+            bool result = repo.Delete(new object[] { ids[0], ids[1]});
             if (result)
             {
                 repo.SaveChanges();

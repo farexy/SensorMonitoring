@@ -1,9 +1,10 @@
-/**
+﻿/**
  * Created by Александр on 04.12.2016.
  */
 import React, { Component } from 'react';
 import './../Styles/App.css';
 import './../Styles/forms.css';
+import './../Styles/Sensor.css'
 import Header from './Header';
 import SensorList from './SensorList';
 import $ from 'jquery';
@@ -53,11 +54,11 @@ class SensorEditor extends Component {
 
     render() {
         if(this.props.sensor != null)
-            var component = <button className = 'delete-button' onClick = {this.delete}> Delete  < / button >;
+            var component = <button id="delete-sensor" className = 'delete-button' onClick = {this.delete}> Delete  < / button >;
         return (
             < div
         className = "SensorEditor" >
-            < Header / >
+            < Header user={this.props.user}/ >
             < div
         className = "loginmodal-container" >
             < form
@@ -244,11 +245,11 @@ class SensorEditor extends Component {
     delete = () =>{
         $.ajax({
             url: this.props.url + 'delete?id=' + this.props.sensor.Id,
-            type: 'DELETE',
+            type: 'GET',
             success: (function (response) {
                 if (response.IsSuccess) {
                     console.log(response);
-                    Header.open(<SensorList url='http://localhost:24688/api/sensor/' masterId='1'/>);
+                    Header.open(<SensorList user={this.props.user} url='http://localhost:24688/api/sensor/' masterId='1'/>);
 
                 } else console.log(response)
 
@@ -263,7 +264,7 @@ class SensorEditor extends Component {
         var limit = this.state.limit;
         var dimension = this.state.dimension.trim();
         var substance = this.state.substance.trim();
-        var userId = this.props.masterId;
+        var userId = this.props.user.Id;
         if(this.props.sensor != null)
             var id = this.props.sensor.Id;
         else
@@ -287,7 +288,7 @@ class SensorEditor extends Component {
             success: (function (response) {
                 if (response.IsSuccess) {
                     console.log(response);
-                    Header.open(<SensorList url='http://localhost:24688/api/sensor/' masterId='1'/>);
+                    Header.open(<SensorList user={this.props.useru} url='http://localhost:24688/api/sensor/'/>);
 
                 } else console.log(response)
 

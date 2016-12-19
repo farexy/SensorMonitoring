@@ -1,0 +1,16 @@
+.reading-titel{
+    font-family: "Segoe UI";
+    font-size: 40px;
+}
+
+.reading{
+    font-family: "Segoe UI";
+    font-size: 48px;
+    color: #0074d9;
+}
+
+.reading-red{
+    font-family: "Segoe UI";
+    font-size: 48px;
+    color: red;
+}

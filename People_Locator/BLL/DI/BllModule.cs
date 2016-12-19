@@ -19,6 +19,7 @@ namespace BLL.DI
 
             builder.RegisterType<SubscriptionService>().As<IService<SubscriptionDTO>>();
 
+
             builder.RegisterType<SensorService>().As<IService<SensorDTO>>();
 
             builder.RegisterType<SensorReadingService>().As<IService<SensorReadingDTO>>();

@@ -7,8 +7,9 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
-/*
-.Login{
-  visibility: hidden;
+
+.intro-text{
+  margin-left: 10%;
+  margin-top: 2%;
+  margin-right: 5%;
 }
-*/

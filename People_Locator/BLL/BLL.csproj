@@ -59,12 +59,15 @@
     <Compile Include="Services\IService.cs" />
     <Compile Include="Services\IUserService.cs" />
     <Compile Include="Services\SensorReadingService.cs" />
+    <Compile Include="Services\SensorReadingTable.cs" />
     <Compile Include="Services\SensorService.cs" />
     <Compile Include="Services\SubscriptionService.cs" />
     <Compile Include="Services\UserService.cs" />
     <Compile Include="Validation\IValidator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Validation\SensorReandingValidator.cs" />
     <Compile Include="Validation\SensorValidator.cs" />
+    <Compile Include="Validation\SubscriptionValidator.cs" />
     <Compile Include="Validation\UserValidator.cs" />
     <Compile Include="Validation\ValidationException.cs" />
     <Compile Include="Validation\Validator.cs" />

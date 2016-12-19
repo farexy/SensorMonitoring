@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{62ECCE11-73A8-41F7-873B-7FEC0AE5549D}"
 EndProject
@@ -16,6 +16,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL.Api", "BLL.Api\BLL.Api.csproj", "{8E5C7DDA-052A-4F55-99CE-CCDEA44254FB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SL", "SL\SL.csproj", "{9F2E4337-75BA-4576-8E65-C47F2472A32D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SensorEmulate", "SensorEmulate\SensorEmulate.csproj", "{7E7E84BB-F48F-4EE4-A9A6-FC817B5DE285}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{9F2E4337-75BA-4576-8E65-C47F2472A32D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F2E4337-75BA-4576-8E65-C47F2472A32D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9F2E4337-75BA-4576-8E65-C47F2472A32D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E7E84BB-F48F-4EE4-A9A6-FC817B5DE285}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E7E84BB-F48F-4EE4-A9A6-FC817B5DE285}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E7E84BB-F48F-4EE4-A9A6-FC817B5DE285}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E7E84BB-F48F-4EE4-A9A6-FC817B5DE285}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

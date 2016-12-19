@@ -58,7 +58,7 @@ namespace DAL.Api.Controllers
         {
             try
             {
-                service.Delete(new object[] {id});
+                 service.Delete(id);
             }
             catch (ValidationException e)
             {

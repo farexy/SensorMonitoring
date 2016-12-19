@@ -15,6 +15,38 @@ namespace DAL.Api.Controllers
     {
         private IService<SensorReadingDTO> service = DependencyResolver.Current.GetService<IService<SensorReadingDTO>>();
 
+        [System.Web.Http.HttpGet]
+        [System.Web.Http.Route("api/sensorreading/add_value")]
+        public CUDResponseView AddValue([FromUri]double value, [FromUri]int sensorId)
+        {
+            /*SensorReadingDTO reading = service.Find(sr => sr.SensorId == sensorId).FirstOrDefault();
+            if(reading == null || DateTime.Now - reading.DateTime > TimeSpan.FromHours(1))
+                service.Create(new SensorReadingDTO()
+                {
+                    DateTime = DateTime.Now,
+                    SensorId = sensorId,
+                    Value = value
+                });*/
+            SensorReadingTable.UpdateReading(sensorId, value);
+            return CUDResponseView.BuildSuccessResponse();
+        }
+
+        [System.Web.Http.HttpGet]
+        public SensorReadingDTO GetLastReading(int id)
+        {
+            return new SensorReadingDTO()
+            {
+                Value = SensorReadingTable.GetReading(id)
+
+            };
+        }
+
+        [System.Web.Http.HttpGet]
+        public IEnumerable<SensorReadingDTO> GetSensorReadings()
+        {
+            return service.Find(sr => true);
+        }
+            
         [System.Web.Http.HttpPost]
         public CUDResponseView CreateSensorReading(SensorReadingDTO model)
         {

@@ -1,0 +1,54 @@
+
+.modal-window-hidden{
+    width: 400px;
+    height: 150px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -25px;
+    margin-left: -200px;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 6px;
+    background-color: white;
+    visibility: hidden;
+}
+
+.modal-window-visible{
+    width: 400px;
+    height: 175px;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    margin-top: -25px;
+    margin-left: -200px;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 6px;
+    background-color: white;
+    visibility: visible;
+}
+
+.modal-text{
+    left: 40%;
+}
+
+.modal-input{
+    height: 44px;
+    font-size: 16px;
+    width: 100%;
+    margin-bottom: 10px;
+    -webkit-appearance: none;
+    background: #fff;
+    border: 1px solid #d9d9d9;
+    border-top: 1px solid #c0c0c0;
+    /* border-radius: 2px; */
+    padding: 0 8px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+.error-text{
+    color: red;
+    font-family: "Segoe UI";
+}

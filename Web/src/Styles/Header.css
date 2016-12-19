@@ -7,11 +7,9 @@
 }
 
 
-
 .App-logo {
     height: 5%;
     width: 5%;
-
 }
 
 ul{
@@ -20,10 +18,11 @@ ul{
 }
 
 .lil{
+    display: inline-block;
 }
 
 .lil a {
-    display:block;
+    display:inline-block;
     color:white;
     text-align: center;
     padding: 20px 20px;

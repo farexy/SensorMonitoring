@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web.Http;
 using BLL.Loader;
 using BLL.Loader.DTO;
+using SL.Models;
 
 namespace SL.Controllers
 {
@@ -13,11 +14,18 @@ namespace SL.Controllers
 
 
         [System.Web.Http.HttpPost]
-        public CUDResponseView CreateSubscription(SubscriptionDTO model)
+        public CUDResponseView CreateSubscription(SubscriptionViewModel model)
         {
             try
             {
-                loader.PostItem(model);
+                ILoader<SensorDTO> sensorLoader = (ILoader<SensorDTO>)System.Web.Mvc.DependencyResolver.Current.GetService(typeof(ILoader<SensorDTO>));
+                SensorDTO sensor = sensorLoader.LoadById(model.SensorId);
+                if (sensor != null && sensor.Password == model.Password)
+                    loader.PostItem(new SubscriptionDTO() { SensorId = model.SensorId, UserId = model.UserId});
+                else
+                {
+                    throw new ValidationException("Password is not correct");
+                }
             }
             catch (ValidationException ex)
             {
@@ -26,9 +34,11 @@ namespace SL.Controllers
             return CUDResponseView.BuildSuccessResponse();
         }
 
-        public IEnumerable<SubscriptionDTO> GetSensorsByUserId(int userId)
+        public IEnumerable<SensorDTO> GetSensorsByUserId(int userId)
         {
-            return null;
+            IEnumerable<int> ids = loader.LoadAll().Where(s => s.UserId == userId).Select(s => s.SensorId);
+            ILoader<SensorDTO> sensorLoader = (ILoader<SensorDTO>)System.Web.Mvc.DependencyResolver.Current.GetService(typeof(ILoader<SensorDTO>));
+            return sensorLoader.LoadAll().Where(s => ids.Contains(s.Id));
             // return service.Find(s => s.UserId == userId).Select(s => s.Sensor);
         }
 
@@ -51,12 +61,13 @@ namespace SL.Controllers
             return CUDResponseView.BuildSuccessResponse();
         }
 
-        [System.Web.Http.HttpDelete]
-        public CUDResponseView DeleteSubscription(int userId, int sensorId)
+        [System.Web.Http.HttpGet]
+        [Route("api/subscription/delete")]
+        public CUDResponseView DeleteSubscription([FromUri]int sensorId, [FromUri]int userId)
         {
             try
             {
-                //loader.DeleteItem(new object[] { userId, sensorId });
+                loader.DeleteItem(new object[] { userId, sensorId });
             }
             catch (ValidationException ex)
             {

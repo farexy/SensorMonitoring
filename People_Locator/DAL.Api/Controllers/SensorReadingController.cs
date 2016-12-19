@@ -26,9 +26,9 @@ namespace DAL.Api.Controllers
             return true;
         }
 
-        public SensorReading GetSensorReading(DateTime dateTime, int sensorId)
+        public IEnumerable<SensorReading> GetSensorReading()
         {
-            return repo.Find(s => s.SensorId == sensorId && s.DateTime == dateTime).FirstOrDefault();
+            return repo.Find(s => true);
         }
 
         [System.Web.Http.HttpPut]

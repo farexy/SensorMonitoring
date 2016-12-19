@@ -24,12 +24,12 @@ class SensorList extends Component {
     render() {
         return(
             <div className='SensorList'>
-            <Header/>
+            <Header user={this.props.user}/>
                 <div className='sensor-list'>
                 <button className='add-button' onClick={this.openAddSensorEditor}>Add new sensor</button>
         {
             this.state.list.map((item) =>
-                <SensorView key={item.Id} sensor={item} url={this.props.url}/>
+                <SensorView action='setting' key={item.Id} sensor={item} user={this.props.user} url={this.props.url}/>
             )
         }
             </div>
@@ -40,14 +40,14 @@ class SensorList extends Component {
 
     openAddSensorEditor = () => {
         ReactDOM.render(
-            <SensorEditor sensorId='0' masterId='1' method='create' url={this.props.url}/>,
+            <SensorEditor sensorId='0' user={this.props.user} method='create' url={this.props.url}/>,
             document.getElementById('root')
         )
     }
 
     loadData = () => {
         $.ajax({
-            url: this.props.url + 'getSensorsByMasterId?userId=' + this.props.masterId,
+            url: this.props.url + 'getSensorsByMasterId?userId=' + this.props.user.Id,
             dataType: 'json',
             type: 'GET',
             success: (function (response) {
